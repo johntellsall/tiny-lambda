@@ -1,0 +1,9 @@
+{
+  "main": "handler.js",
+  "dependencies": {
+    "serverless-domain-manager": "2.6.9"
+  },
+  "devDependencies": {
+    "serverless-plugin-typescript": "1.1.5"
+  }
+}

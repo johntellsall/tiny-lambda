@@ -1,4 +1,4 @@
-var QUEUE_URL = process.env.QUEUE_URL;
+const QUEUE_URL = process.env.QUEUE_URL;
 var AWS = require('aws-sdk');
 var sqs = new AWS.SQS({region : 'us-east-1'});
 

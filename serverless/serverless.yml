@@ -1,0 +1,28 @@
+service: ping
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: ${opt:stage, 'development'}
+
+plugins:
+  - serverless-domain-manager
+  - serverless-plugin-typescript
+
+custom:
+  customDomain:
+    domainName: ping.tio-vdk.io
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+package:
+  exclude:
+    - node_modules/**
+    
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-EXEC_ROLE='arn:aws:iam::344489303283:role/oct22-lambda'
-QUEUE_URL='https://sqs.us-east-1.amazonaws.com/344489303283/votes'
+EXEC_ROLE='arn:aws:iam::591128001215:role/tuitionio-production-us-east-1-lambdaRole'
+QUEUE_URL='https://sqs.us-east-1.amazonaws.com/591128001215/ELIGIBILITY_REACTIVATE'
 
 set -euo pipefail # strict mode
 set -o xtrace # verbose
